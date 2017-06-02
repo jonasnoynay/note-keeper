@@ -1,0 +1,27 @@
+{
+  "name": "note-keeper",
+  "version": "1.0.0",
+  "description": "A simple app for keeping notes. Im using Google Firebase and VueJS/Materialize CSS",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jushaky94/note-keeper.git"
+  },
+  "keywords": [
+    "note",
+    "keeper",
+    "jonas",
+    "noynay",
+    "firebase",
+    "vue"
+  ],
+  "author": "Jonas Noynay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jushaky94/note-keeper/issues"
+  },
+  "homepage": "https://github.com/jushaky94/note-keeper#readme"
+}

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Jonas' Note Keeper</title>
+</head>
+<script type="text/javascript" src="https://unpkg.com/vue"></script>
+<body>
+
+<div id="app">
+	<template>
+		<ul class="noteList">
+			<li class="note normal">
+				<span>Date: 1/2/14</span>
+				<h1 class="note-title">Note Title</h1>
+				<p class="note-text">Note Description</p>
+				<div class="actions">
+					<button type="button" class="edit-note"><i class="edit"></i> Edit</button>
+					<button type="button" class="edit-note"><i class="edit"></i> Delete</button>
+				</div>
+			</li>
+		</ul>
+	</template>
+</div>
+</body>
+<script type="text/javascript">
+	var app = new Vue({
+  el: '#app',
+  data: {
+    message: 'Hello Vue!'
+  }
+})
+</script>
+</html>
