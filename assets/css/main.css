@@ -1,0 +1,13 @@
+.noteList .card-action a {
+  float: none;
+  /* width: 50%; */
+  margin: 0 !important;
+  display: inline-block;
+  color: #8a8a8a !important;
+  line-height: 32px; }
+  .noteList .card-action a:first-child {
+    margin-right: 16px !important; }
+  .noteList .card-action a i {
+    vertical-align: top;
+    font-size: 19px;
+    padding: 6px; }

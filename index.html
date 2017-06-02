@@ -2,23 +2,35 @@
 <html>
 <head>
 	<title>Jonas' Note Keeper</title>
+	 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/materialize.css" />
+	<link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+	<script type="text/javascript" src="https://unpkg.com/vue"></script>
 </head>
-<script type="text/javascript" src="https://unpkg.com/vue"></script>
+
 <body>
 
 <div id="app">
 	<template>
-		<ul class="noteList">
-			<li class="note normal">
-				<span>Date: 1/2/14</span>
-				<h1 class="note-title">Note Title</h1>
-				<p class="note-text">Note Description</p>
-				<div class="actions">
-					<button type="button" class="edit-note"><i class="edit"></i> Edit</button>
-					<button type="button" class="edit-note"><i class="edit"></i> Delete</button>
+		<div class="container">
+			<ul class="noteList row">
+			<li class="col s4 note" v-for="note in notes">
+				<div class="card">
+					<div class="card-content">
+					
+						<span>{{ note.date }}</span>
+						<h1 class="note-title card-title">{{ note.title }}</h1>
+						<p class="note-text">{{ note.text }}</p>	
+					</div>
+
+					<div class="card-action">
+						<a href="#" v-on:click="edit_note(note)"><i class="material-icons">mod_edit</i>Edit </a>
+						<a href="#" v-on:click="delete_note(note)"><i class="material-icons">delete</i>Delete </a>
+					</div>
 				</div>
 			</li>
 		</ul>
+		</div>
 	</template>
 </div>
 </body>
@@ -26,7 +38,41 @@
 	var app = new Vue({
   el: '#app',
   data: {
-    message: 'Hello Vue!'
+    notes: [
+
+    	{
+    		date: '12/12/12/',
+    		title: 'title1',
+    		text: 'text1',
+    		status: 'normal'
+
+    	},
+    	{
+    		date: '12/12/12/',
+    		title: 'title2',
+    		text: 'text2',
+    		status: 'normal'
+
+    	},
+    	{
+    		date: '12/12/12/',
+    		title: 'title3',
+    		text: 'text3',
+    		status: 'normal'
+
+    	},
+    ]
+  },
+
+  methods: {
+
+  		edit_note: function(note){
+  			//alert('Edit '+this.title);
+  		},
+		delete_note: function(note){
+			console.log(note.title);
+			//alert('Delete '+this.title);
+		}
   }
 })
 </script>
